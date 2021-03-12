@@ -57,13 +57,17 @@ def dtw(A, B, d):
 
 print("Default example: Cat data with weight, whiskers, meows/hr")
 
+#parsing the data from the text files
 input1 = parseFile("input1.txt")
 input2 = parseFile("input2.txt")
+
+#checking the command line arguments and run the appropriate distance function
 if str(sys.argv[1]) == "-c":
     dst, path = dtw(input1, input2, d1)
 else:
     dst, path = dtw(input1, input2, d2)
 
+#print results
 print("Cost: " + str(dst))
 print("Path: " + str(path))
 
