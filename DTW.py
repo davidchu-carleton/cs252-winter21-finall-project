@@ -55,20 +55,27 @@ def dtw(A, B, d):
 
     return dtw[n][m], path
 
-print("Default example: Cat data with weight, whiskers, meows/hr")
+if __name__=="__main__":
+    print("Default example: Cat data with weight, whiskers, meows/hr")
 
-#parsing the data from the text files
-input1 = parseFile("input1.txt")
-input2 = parseFile("input2.txt")
+    if len(sys.argv) == 4:
+        #parsing the data from the text files
+        input1 = parseFile(sys.argv[1])
+        input2 = parseFile(sys.argv[2])
 
-#checking the command line arguments and run the appropriate distance function
-if str(sys.argv[1]) == "-c":
-    dst, path = dtw(input1, input2, d1)
-else:
-    dst, path = dtw(input1, input2, d2)
+        #checking the command line arguments and run the appropriate distance function
+        if str(sys.argv[3]) == "-c":
+            dst, path = dtw(input1, input2, d1)
+        elif str(sys.argv[3]) == "-e":
+            dst, path = dtw(input1, input2, d2)
+        else:
+            print("Bad format for distance function.")
+            print("Use -c for cat distance, -e for euclidean")
 
-#print results
-print("Cost: " + str(dst))
-print("Path: " + str(path))
+        #print results
+        print("Cost: " + str(dst))
+        print("Path: " + str(path))
+    else:
+        print("Usage: DTW.py <input_file_A> <input_file_B> <-c|-o>")
 
 
