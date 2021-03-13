@@ -10,11 +10,7 @@ Make sure you have the latest python version installed on your environment.
 
 Run this command to run the python script
 
- python3 ./DTW.py "_argument_"
-
-"_argument_" = "-c" if you want to run the cat distance function
-
-"_argument_" = "-e" if you want to run the Euclidean distance function
+Usage: python3 DTW.py <input_file_A> <input_file_B> <-c|-o>
 
 2. Authors
 

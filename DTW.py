@@ -56,8 +56,6 @@ def dtw(A, B, d):
     return dtw[n][m], path
 
 if __name__=="__main__":
-    print("Default example: Cat data with weight, whiskers, meows/hr")
-
     if len(sys.argv) == 4:
         #parsing the data from the text files
         input1 = parseFile(sys.argv[1])
@@ -76,6 +74,14 @@ if __name__=="__main__":
         print("Cost: " + str(dst))
         print("Path: " + str(path))
     else:
-        print("Usage: DTW.py <input_file_A> <input_file_B> <-c|-o>")
+        print("Usage: python3 DTW.py <input_file_A> <input_file_B> <-c|-o>")
+        print("Default example: Cat data with weight, whiskers, meows/hr")
+
+        #parsing the data from the text files
+        input1 = parseFile("input1.txt")
+        input2 = parseFile("input2.txt")
+
+        dst, path = dtw(input1, input2, d1)
+
 
 
