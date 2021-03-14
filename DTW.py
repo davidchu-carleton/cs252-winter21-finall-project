@@ -74,7 +74,7 @@ if __name__=="__main__":
         print("Cost: " + str(dst))
         print("Path: " + str(path))
     else:
-        print("Usage: python3 DTW.py <input_file_A> <input_file_B> <-c|-o>")
+        print("Usage: python3 DTW.py <input_file_A> <input_file_B> <-c|-e>")
         print("Default example: Cat data with weight, whiskers, meows/hr")
 
         #parsing the data from the text files
