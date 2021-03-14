@@ -10,7 +10,7 @@ Make sure you have the latest python version installed on your environment.
 
 Run this command to run the python script
 
-Usage: python3 DTW.py <input_file_A> <input_file_B> <-c|-o>
+Usage: python3 DTW.py <input_file_A> <input_file_B> <-c|-e>
 
 2. Authors
 
